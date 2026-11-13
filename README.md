@@ -1,5 +1,5 @@
-A Python-based computer vision application that enables touchless screen brightness adjustment through hand gestures.
-Using OpenCV and MediaPipe, the application tracks the thumb and index finger through a webcam. Their distance is mapped to screen brightness (0–100%) using NumPy interpolation, with exponential smoothing for stable adjustments. 
+## Hand Gesture-Based Screen Brightness Control
+A Python-based computer vision application that enables touchless screen brightness adjustment through hand gestures. Using OpenCV and MediaPipe, the application tracks the thumb and index finger through a webcam. Their distance is mapped to screen brightness (0–100%) using NumPy interpolation, with exponential smoothing for stable adjustments. 
 The processing pipeline involves webcam acquisition, hand landmark detection, fingertip coordinate extraction and Euclidean distance calculation. The distance between the fingertips is calculated as:
 
 $$
@@ -18,3 +18,40 @@ The calculated brightness is constrained to the range of 0–100%, followed by e
     <img width="500" height="500" alt="output" src="https://github.com/user-attachments/assets/059d9e02-5d78-451e-9a2f-63ebc60960a4" />
 
 </p>
+
+
+## Project Structure
+
+```text
+hand-gesture-brightness-control/
+├── src/
+│   ├── main.py
+│   ├── handDetector.py
+│   └── brightnessController.py
+│
+├── requirements.txt
+├── README.md
+├── LICENSE
+└── .gitignore
+```
+
+## Installation
+
+Clone the repository and navigate to the project directory:
+
+```bash
+git clone https://github.com/mahrkhs/hand-gesture-brightness-control.git
+cd hand-gesture-brightness-control
+```
+
+Create and activate a virtual environment and install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the application:
+
+```bash
+python src/main.py
+```
