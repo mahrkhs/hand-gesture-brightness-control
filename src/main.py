@@ -9,18 +9,15 @@ from brightnessController import BrightnessController
 
 def main():
 
-    # Initialize hand detector
     detector = HandDetector(
         max_hands=1,
         detection_confidence=0.75,
         tracking_confidence=0.75
     )
 
-    # Initialize brightness controller
     brightness_controller = BrightnessController()
 
-    # Open webcam
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(0)    # Open webcam
 
     if not cap.isOpened():
         print("Error: Could not access webcam.")
